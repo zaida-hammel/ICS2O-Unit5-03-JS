@@ -16,3 +16,19 @@ if (navigator.serviceWorker) {
 /**
  * This function determines if a person is eligible for movie rates.
  */
+function myButtonClicked() {
+  //input
+  const seventeenAbove = document.getElementById("seventeenAbove").checked
+  const thirteenToSixteen = document.getElementById("thirteenToSixteen").checked
+  const fiveToTwelve = document.getElementById("fiveToTwelve").checked
+  //process
+  if (seventeenAbove == true) {
+    document.getElementById("answers").innerHTML = "You are eligible to watch R rated movies alone."
+  } else if (thirteenToSixteen == true) {
+      document.getElementById("answers").innerHTML = "You are eligible to watch PG 13 rated movies alone."
+  } else if (fiveToTwelve == true) {
+      document.getElementById("answers").innerHTML = "You are eligible to watch G and PG rated movies alone."
+  } else {
+      document.getElementById("answers").innerHTML = "You are most likely not eligible to watch any rated movies alone."
+  }
+}
